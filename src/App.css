@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* Page background */
+.fb-container {
+  min-height: 100vh;
+  background: #f0f2f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+/* Card */
+.fb-box {
+  width: 380px;
+  max-width: 95%;
+  padding: 28px;
+  text-align: center;
+}
+
+/* Logo */
+.fb-logo {
+  color: #1877f2;
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  line-height: 1;
+}
+
+/* Form */
+.fb-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Basic input style */
+.fb-form input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 6px;
+  border: 1px solid #dddfe2;
+  font-size: 15px;
+  background: #fff;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+/* Focus state */
+.fb-form input:focus {
+  outline: none;
+  border-color: #1877f2;
+  box-shadow: 0 0 0 3px rgba(24, 119, 242, 0.06);
+}
+
+/* input wrapper for eye button */
+.input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* adjust password input padding so eye fits inside */
+.input-wrap input {
+  padding-right: 44px; /* space for eye button */
+}
+
+/* Eye button (inside input) */
+.eye-btn {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  padding: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 4px;
+  line-height: 0;
+}
+
+/* Make svg inherit color and be sized */
+.eye-btn svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+  color: #606770;
+}
+
+/* Login button */
+.fb-login-btn {
+  width: 100%;
+  padding: 12px 14px;
+  background: #1877f2;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 6px;
+  transition:
+    background 0.12s ease,
+    transform 0.05s ease;
+}
+
+.fb-login-btn:hover {
+  background: #166fe5;
+}
+
+/* Responsive tweaks: smaller screens */
+@media (max-width: 420px) {
+  .fb-box {
+    padding: 20px;
+  }
+
+  .fb-logo {
+    font-size: 40px;
+    margin-bottom: 16px;
+  }
+
+  .fb-form input {
+    padding: 11px 12px;
+    font-size: 15px;
+  }
+
+  .fb-login-btn {
+    padding: 12px;
+    font-size: 16px;
+  }
+}
+
+.fb-forgot {
+  display: block;
+  margin-top: 16px;
+  color: #1877f2;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.fb-forgot:hover {
+  text-decoration: underline;
+}
+
+.fb-success {
+  padding: 20px 0;
+  color: #42b72a;
+}
+
+.fb-success h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.fb-success p {
+  font-size: 16px;
+}
+
+.error-text {
+  color: #f02849;
+  font-size: 13px;
+  text-align: left;
+  margin-top: -4px;
+  margin-bottom: 6px;
+  font-weight: 400;
+}
